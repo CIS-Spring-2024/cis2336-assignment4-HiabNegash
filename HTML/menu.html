@@ -1,0 +1,183 @@
+<html>
+<head>
+<title>Hiab's Menu</title>
+<style>
+    .navbar{
+        background: crimson; padding-right: 15px; padding-left: 15px;
+        
+    }
+    .navdiv{
+        display: flex; align-items: center; justify-content: space-between;
+    }
+    nav ul li a:clic {
+        background-color: black;
+    }
+    nav ul li a:hover{
+        background: black;
+    }
+    .logo a{
+        font-size: 35px; font-weight: 600; color: white;
+    }
+    li{
+        list-style: none; display: inline-block;
+    }
+    li a{
+        color: white; font-size: 18px; font-weight: bold; margin-right: 25px; border-radius: 20px; transition:0.3s;
+    }
+    button{
+        background-color: black; margin-left: 10px; border-radius: 10px; padding: 10px; width: 90px;
+    }
+    button a{
+        color: white; font-weight: bold; font-size: 15px;
+    }
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        background: rgba(0, 0, 0, 0.7) 
+        url(../images/tacos.webp) center center fixed;
+        background-size: cover;
+        background-blend-mode: darken;
+        
+    }
+    .menu{
+        
+        color: white;
+        top:20%;
+        left: 30%;
+    }
+    .menu h1{
+        font-size: 60px;
+        
+    }
+    .food-items{
+    display: grid;
+    position: relative;
+    grid-template-rows: auto 1fr;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    margin: 0 20px;
+}
+.food-items img{
+    position: relative;
+    width: 30%;
+    
+    border-radius: 20px 20px 20px 20px;
+    image-resolution: from-image;
+}
+
+.details{
+    padding: 20px 10px;
+    display: grid;
+    grid-template-rows: auto 1fr 50px;
+    grid-row-gap: 5px;
+}
+.details-sub{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.details-sub>h5{
+    font-weight: 600;
+    font-size: 18px;
+    color: yellow;
+}
+.price{
+    text-align: right;
+}
+.details>p{
+    color: white;
+    font-size: 15px;
+    line-height: 28px;
+    font-weight: 400;
+    align-self: stretch;
+}
+.details>button{
+    background-color: #cb202d;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 180px;
+}
+
+
+    </style>
+
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"><a href="#" >Hiab's cafe</a></div>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="#">Account</a></li>
+                <li><a href="assignment1.html">About</a></li>
+                <button><a href="#">SignUp</a></button>
+                <button><a href="#">LogIn</a></button>
+            </ul>
+        </div>
+    </nav>
+    <div class="menu">
+        <h1 align="center">Menu</h1>
+    </div>
+    <div class="food-items">
+        <img src="../images/meat tacos.jpg" center center fixed>
+        <div class="details">
+            <div class="details-sub">
+                <h5>Arrachera Tacos</h5>
+                <h5 class="price">$8</h5>
+            </div>
+            <p>Try these freshly made tacos!</p>
+            <button onclick="location.href='cart.html'">Click to buy!</button>
+        </div>
+    </div>
+    <div class="food-items">
+        <img src="../images/lamb.jpg" center center fixed>
+        <div class="details">
+            <div class="details-sub">
+                <h5>Lamb Chops with Fries</h5>
+                <h5 class="price">$12</h5>
+            </div>
+            <p>Try Hiab's authentic Lamb Chops with French Fries!</p>
+            <button onclick="location.href='cart.html'">Click to buy!</button>
+        </div>
+    </div>
+    <div class="food-items">
+        <img src="../images/dumplings.jpg" center center fixed>
+        <div class="details">
+            <div class="details-sub">
+                <h5>Pork Dumplings</h5>
+                <h5 class="price">$5</h5>
+            </div>
+            <p>Try a plate of Pork Dumplings!</p>
+            <button onclick="location.href='cart.html'">Click to buy!</button>
+        </div>
+    </div>
+    <div class="food-items">
+        <img src="../images/burger.jpg" center center fixed>
+        <div class="details">
+            <div class="details-sub">
+                <h5>Deluxe CheesBurger</h5>
+                <h5 class="price">$5</h5>
+            </div>
+            <p>The best CheeseBurger in Houston!</p>
+            <button onclick="location.href='cart.html'">Click to buy!</button>
+        </div>
+    </div>
+    <div class="food-items">
+        <img src="../images/pizza.jpg" center center fixed>
+        <div class="details">
+            <div class="details-sub">
+                <h5>Pizza</h5>
+                <h5 class="price">$3</h5>
+            </div>
+            <p>Hungry for a slice of Pizza?</p>
+            <button onclick="location.href='cart.html'">Click to buy!</button>
+        </div>
+    </div>
+
+  
+</body>

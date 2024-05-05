@@ -1,0 +1,236 @@
+<html>
+<title>Shopping Cart</title>
+<head>
+<script src="math.js" async></script>
+<style>
+        .navbar{
+        background: crimson; padding-right: 15px; padding-left: 15px;
+        
+    }
+    .navdiv{
+        display: flex; align-items: center; justify-content: space-between;
+    }
+    nav ul li a:clic {
+        background-color: black;
+    }
+    nav ul li a:hover{
+        background: black;
+    }
+    .logo a{
+        font-size: 35px; font-weight: 600; color: white;
+    }
+    li{
+        list-style: none; display: inline-block;
+    }
+    li a{
+        color: white; font-size: 18px; font-weight: bold; margin-right: 25px; border-radius: 20px; transition:0.3s;
+    }
+    button{
+        background-color: black; margin-left: 10px; border-radius: 10px; padding: 10px; width: 90px;
+    }
+    button a{
+        color: white; font-weight: bold; font-size: 15px;
+    }
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        background: rgba(0, 0, 0, 0.7) 
+        url(../images/tacos.webp) center center fixed;
+        background-size: cover;
+        background-blend-mode: darken;
+        
+    }
+    .cart {
+        font-size: 30px;
+        color: white;
+    }
+    .total-price{
+	padding-bottom: 15px;
+}
+.cart-item{
+	
+	border-radius: 10px;
+	padding: 15px 20px;
+	margin-bottom: 20px;
+}
+.center-item{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.cart-item img{
+	width: 115px;
+}
+.cart-item h5{
+    padding: 0 45px;
+}
+.cart-item .remove-item{
+	width: 25px!important;
+}
+.btn-default{
+	background-color: darkred;
+}
+.cart-item .form-control{
+	background-color: white;
+	border: none;
+    width: 65px;
+    border-radius: 10px!important;
+    font-weight: 700;
+    font-size: 20px;
+}
+.input-group{
+	width: unset;
+	flex-wrap: nowrap;
+}
+.status{
+	text-align: right;
+}
+.check-out{
+    float: right;
+    padding: 10px 30px;
+	font-size: 19px;
+	background-color: #2FBE70;
+	border: none;
+}
+</style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"><a href="#" >Hiab's cafe</a></div>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="#">Account</a></li>
+                <li><a href="assignment1.html">About</a></li>
+                <button><a href="#">SignUp</a></button>
+                <button><a href="#">LogIn</a></button>
+            </ul>
+        </div>
+    </nav>
+    <div class="Cart">
+        <h1 align="center">Shopping Cart</h1>
+    </div>
+    <div class="container">
+        
+        <div class="cart">
+           <div class="col-md-12 col-lg-10 mx-auto">
+              <div class="cart-item">
+                 <div class="row">
+                    <div class="col-md-7 center-item">
+                       <img src="../images/meat tacos.jpg" alt="">
+                       <h5>Arrechera Tacos( $8 )</h5>
+                    </div>
+
+                    <div class="col-md-5 center-item">
+                       <div class="input-group number-spinner">
+                          <button id="minus" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                          <input id="number" type="number" min="0" class="form-control text-center" value="1">
+                          <button id="plus" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                       </div>
+                       <h5>$ <span class="total">8</span> </h5>
+                       <img src="../images/remove.png" alt="" class="remove-item">
+                    </div>
+                 </div>
+              </div>
+
+              <div class="cart-item">
+                 <div class="row">
+                    <div class="col-md-7 center-item mx-auto">
+                       <img src="../images/lamb and fries.png" alt="">
+                       <h5>Lamb chop with Fries( $12 )</h5>
+                    </div>
+                    <div class="col-md-5 center-item">
+                       <div class="input-group number-spinner">
+                          <button id="minus" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                          <input id="number" type="number" min="0" class="form-control text-center" value="1">
+                          <button  id="plus" class="btn btn-default"><i class="fas fa-plus"></i></button>
+
+                       </div>
+                       <h5>$ <span class="total">12</span> </h5>
+                       <img src="../images/remove.png" alt="" class="remove-item">
+                     </div>
+                 </div>
+              </div>
+               <div class="cart-item">
+                 <div class="row">
+                    <div class="col-md-7 center-item mx-auto">
+                       <img src="../images/dumplings.jpg" alt="">
+                       <h5>Dumplings( $6 )</h5>
+                    </div>
+                    <div class="col-md-5 center-item">
+                       <div class="input-group number-spinner">
+                          <button id="minus" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                          <input id="number" type="number" min="0" class="form-control text-center" value="1">
+                          <button  id="plus" class="btn btn-default"><i class="fas fa-plus"></i></button>
+
+                       </div>
+                       <h5>$ <span class="total">6</span> </h5>
+                       <img src="../images/remove.png" alt="" class="remove-item">
+                    </div>
+                 </div>
+               </div>
+               <div class="cart-item">
+                 <div class="row">
+                    <div class="col-md-7 center-item mx-auto">
+                       <img src="../images/burger.jpg" alt="">
+                       <h5>Deluxe Cheeseburger( $5 )</h5>
+                    </div>
+                    <div class="col-md-5 center-item">
+                       <div class="input-group number-spinner">
+                          <button id="minus" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                          <input id="number" type="number" min="0" class="form-control text-center" value="1">
+                          <button  id="plus" class="btn btn-default"><i class="fas fa-plus"></i></button>
+
+                       </div>
+                       <h5>$ <span class="total">5</span> </h5>
+                       <img src="../images/remove.png" alt="" class="remove-item">
+                    </div>
+                 </div>
+               </div>
+                
+               <div class="cart-item">
+                 <div class="row">
+                    <div class="col-md-7 center-item mx-auto">
+                       <img src="../images/pizza.jpg" alt="">
+                       <h5>Pizza( $3 )</h5>
+                    </div>
+                    <div class="col-md-5 center-item">
+                       <div class="input-group number-spinner">
+                          <button id="minus" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                          <input id="number" type="number" min="0" class="form-control text-center" value="1">
+                          <button  id="plus" class="btn btn-default"><i class="fas fa-plus"></i></button>
+
+                       </div>
+                       <h5>$ <span class="total">3</span> </h5>
+                       <img src="../images/remove.png" alt="" class="remove-item">
+                    </div>
+                 </div>
+              </div>
+
+              <div class="cart-item">
+                 <div class="row g-2">
+
+                    <div class="col-6">
+                       
+                       <h5>Total:</h5>
+                    </div>
+
+                    <div class="col-6 status">
+                       
+                     <span class="cart-total-price">0</span>
+                    </div>
+                    
+                 </div>
+              </div>
+              <div class="col-md-12 pt-4 pb-4">
+                 <button type="button" class="btn btn-success check-out" onclick="location.href='assign4.html'">Check Out</button>
+              </div>
+           </div>
+        </div>
+     </div>
+
+
+</body>
+</html>
